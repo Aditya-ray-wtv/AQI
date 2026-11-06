@@ -349,7 +349,7 @@ print("=" * 60)
 # City-wise Average AQI — Bar Chart
 city_aqi = df_clean.groupby('City')['AQI'].mean().sort_values(ascending=False)
 plt.figure(figsize=(12, 6))
-colors = sns.color_palette('RdYlGn_r', len(city_aqi))
+colors = sns.color_palette('RdYlGn', len(city_aqi))
 bars = plt.bar(city_aqi.index, city_aqi.values, color=colors)
 plt.title('City-wise Average AQI (Higher = Worse)', fontsize=14, fontweight='bold')
 plt.xlabel('City')
