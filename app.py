@@ -117,7 +117,7 @@ with chart_col1:
     city_aqi = filtered_df.groupby('City')['AQI'].mean().sort_values(ascending=False)
 
     fig1, ax1 = plt.subplots(figsize=(10, 6))
-    colors = sns.color_palette('RdYlGn_r', len(city_aqi))
+    colors = sns.color_palette('RdYlGn', len(city_aqi))
     bars = ax1.bar(city_aqi.index, city_aqi.values, color=colors)
     ax1.set_xlabel("City", fontsize=12)
     ax1.set_ylabel("Average AQI", fontsize=12)
